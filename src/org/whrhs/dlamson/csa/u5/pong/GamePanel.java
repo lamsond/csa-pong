@@ -3,7 +3,6 @@ package org.whrhs.dlamson.csa.u5.pong;
 import javax.swing.JPanel;
 import java.awt.Color;
 import java.awt.Graphics;
-import java.awt.Dimension;
 
 public class GamePanel extends JPanel{
   // use this class to store constants about the Pong gameboard dimensions.
@@ -23,7 +22,7 @@ public class GamePanel extends JPanel{
   
   // constructor
   public GamePanel() {
-	  setSize(new Dimension(WIDTH, HEIGHT));
+	  setSize(WIDTH, HEIGHT);
 	  leftPaddle = new Paddle(true, LP_CLR);
 	  rightPaddle = new Paddle(false, RP_CLR);
 	  leftScoreboard = new Scoreboard(leftPaddle);

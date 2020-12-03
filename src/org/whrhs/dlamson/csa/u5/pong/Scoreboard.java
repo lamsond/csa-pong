@@ -14,6 +14,7 @@ public class Scoreboard {
 	  x = 150;
 	  y = 75;
   }
+  
 
 	
 }

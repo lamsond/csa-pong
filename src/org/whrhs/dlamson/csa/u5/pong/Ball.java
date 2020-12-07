@@ -1,6 +1,7 @@
 package org.whrhs.dlamson.csa.u5.pong;
 
 import java.awt.Color;
+import java.awt.Graphics;
 
 public class Ball {
 	
@@ -14,13 +15,14 @@ public class Ball {
 		y = GamePanel.HEIGHT/2 - SIZE/2;
 		speed = 3;
 		theta = generateThetaValue();
+		System.out.println(theta);
 		color = new Color(255, 255, 255);
 	}
 	
 	public Ball(Color color) {
 		x = GamePanel.WIDTH/2 - SIZE/2;
 		y = GamePanel.HEIGHT/2 - SIZE/2;
-		speed = 3;
+		speed = 5; // fix this
 		theta = generateThetaValue();
 		this.color = color;
 	}
@@ -41,7 +43,13 @@ public class Ball {
 		this.color = color;
 	}
 	
-	// helper methods can be private
+	// methods (behavior)
+	public void draw(Graphics g) {
+		g.setColor(this.color);
+		g.fillRect(this.x, this.y, SIZE, SIZE);
+	}
+	
+	// helper methods can be private (won't be used outside of this class)
 	private static int generateThetaValue() {
 		int window = 5;
 		int randTheta = 90;

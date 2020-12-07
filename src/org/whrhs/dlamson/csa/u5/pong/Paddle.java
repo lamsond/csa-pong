@@ -71,6 +71,18 @@ public class Paddle{
 	  g.setColor(this.color);
 	  g.fillRect(this.x, this.y, WIDTH, HEIGHT);
   }
+  
+  public Color getColor() {
+	  return color;
+  }
+  
+  public int getScore() {
+	  return score;
+  }
+  
+  public boolean getComputerControlled() {
+	  return computerControlled;
+  }
  
   
 }

@@ -46,7 +46,7 @@ You've already set-up the logic to generate a random theta value for the ball to
 
 ![triggy](https://i.imgur.com/AUEeVhO.png)
 
-Notice, the y value is negative due to the coordinate system we use in Graphics. So all we will do for now in the move method is increment x by `speed*cos(theta)` and y by `-speed*sin(theta)`. You may use the static methods `Math.sin()` and `Math.cos()` to calculate these, just note they expect an input in **radians**. Fortunately there is another method called `Math.degreesToRadians()` that can be chained together to convert this for us. Don't worry about reflections yet, we'll just let the ball travel off the screen for now.
+Notice, the y value is negative due to the coordinate system we use in Graphics. So all we will do for now in the move method is increment x by `speed*cos(theta)` and y by `-speed*sin(theta)`. You may use the static methods `Math.sin()` and `Math.cos()` to calculate these, just note they expect an input in **radians**. Fortunately there is another method called `Math.toRadians()` that can be chained together to convert this for us. Don't worry about reflections yet, we'll just let the ball travel off the screen for now.
 
 ### Setting up the Animation Cycle
 

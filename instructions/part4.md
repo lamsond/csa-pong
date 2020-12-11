@@ -45,6 +45,4 @@ This method should return the ball to the middle of the board after a scoring ev
 ### Call these methods
 
 The `checkPaddleCollision()` method and `updateScore()` should be called in the `actionPerformed()` method (This is what runs every frame). The reset() method should be called
-condtionally based on a scoring event, either within `actionPerformed()` or `updateScore()`, your choice.
-
-This method will be called each time the panel image is refreshed. For today, we will be coding some *not so intelligent* logic for the computer controlled paddle. We'll make the computer's paddle move mindlessly up and down over and over regardless of the position of the ball. We can improve the logic later, but for now let's just make sure we can animate something. To get started, set up the following instance method:  
+condtionally based on a scoring event, either within `actionPerformed()` or `updateScore()`, your choice. 

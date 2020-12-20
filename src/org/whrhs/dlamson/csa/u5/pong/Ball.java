@@ -7,7 +7,8 @@ public class Ball {
 	
 	public static final int SIZE = 10;
 	
-	private int x, y, speed, theta;
+	private int x, y, speed;
+	double theta;
 	private Color color;
 	
 	public Ball() {
@@ -22,7 +23,7 @@ public class Ball {
 	public Ball(Color color) {
 		x = GamePanel.WIDTH/2 - SIZE/2;
 		y = GamePanel.HEIGHT/2 - SIZE/2;
-		speed = 5; // fix this
+		speed = 3;
 		theta = generateThetaValue();
 		this.color = color;
 	}
@@ -55,9 +56,9 @@ public class Ball {
 	}
 	
 	// helper methods can be private (won't be used outside of this class)
-	private static int generateThetaValue() {
+	private static double generateThetaValue() {
 		int window = 5;
-		int randTheta = 90;
+		double randTheta = 90;
 		while(Math.abs(randTheta - 90) < window || Math.abs(randTheta - 270) < window) {
 			randTheta = (int)(Math.random() * 360);
 			

@@ -72,6 +72,17 @@ public class Paddle{
 	  g.fillRect(this.x, this.y, WIDTH, HEIGHT);
   }
   
+  public void move() {
+	  if(computerControlled) {
+		  y += speed;
+		  if(y + HEIGHT >= GamePanel.HEIGHT || y <= 0) {
+			  speed *= -1;
+		  }
+	  } else {
+		  // TODO: Implement Player Logic
+	  }
+  }
+  
   public Color getColor() {
 	  return color;
   }
@@ -83,7 +94,10 @@ public class Paddle{
   public boolean getComputerControlled() {
 	  return computerControlled;
   }
- 
   
+  public void setScore(int score) {
+	  this.score = score;
+  }
+ 
 }
 

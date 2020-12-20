@@ -49,6 +49,11 @@ public class Ball {
 		g.fillRect(this.x, this.y, SIZE, SIZE);
 	}
 	
+	public void move() {
+		x += speed * Math.cos(Math.toRadians(theta));
+		y -= speed * Math.sin(Math.toRadians(theta));
+	}
+	
 	// helper methods can be private (won't be used outside of this class)
 	private static int generateThetaValue() {
 		int window = 5;
